@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Condolence Register &middot; Late Pa. Hyacinth Nwafor Ogunor</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body data-page="condolences">
+
+<a class="skip-link" href="#main-content">Skip to main content</a>
+
+<div data-include="partials/nav.html"></div>
+
+<main id="main-content">
+  <section style="padding-bottom:40px;">
+    <div class="container section-head">
+      <p class="eyebrow">Share Your Memory</p>
+      <h1>Condolence Register</h1>
+      <div class="divider">
+        <svg class="icon"><use href="assets/icons/sprite.svg#icon-hands"></use></svg>
+      </div>
+      <p>Leave a message for the Ogunor family. Every message is read and cherished.</p>
+    </div>
+
+    <div class="container">
+      <!--
+        Connect this form to Formspree in 2 minutes:
+        1. Create a free account at https://formspree.io
+        2. Create a new form, copy the endpoint (looks like https://formspree.io/f/xxxxabcd)
+        3. Replace YOUR_FORM_ID in the action attribute below with your form ID
+      -->
+      <form id="condolenceForm" class="form" action="https://formspree.io/f/YOUR_FORM_ID" method="POST">
+        <div>
+          <label for="name">Your Name</label>
+          <input type="text" id="name" name="name" required autocomplete="name">
+        </div>
+        <div>
+          <label for="relationship">Relationship to the Family (optional)</label>
+          <input type="text" id="relationship" name="relationship" placeholder="e.g. Grandchild, Friend, Neighbor">
+        </div>
+        <div>
+          <label for="email">Email (optional, not published)</label>
+          <input type="email" id="email" name="email" autocomplete="email">
+        </div>
+        <div>
+          <label for="message">Your Message</label>
+          <textarea id="message" name="message" required placeholder="Share a memory or message of condolence..."></textarea>
+        </div>
+        <div style="text-align:center;">
+          <button type="submit" class="btn btn-primary">Sign the Register</button>
+        </div>
+        <p id="formStatus" class="form-status" role="status" style="text-align:center;"></p>
+      </form>
+    </div>
+  </section>
+</main>
+
+<div data-include="partials/footer.html"></div>
+
+<script src="js/include.js"></script>
+<script src="js/main.js"></script>
+</body>
+</html>

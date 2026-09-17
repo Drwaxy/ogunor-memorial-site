@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Photo Gallery &middot; Late Pa. Hyacinth Nwafor Ogunor</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body data-page="gallery">
+
+<a class="skip-link" href="#main-content">Skip to main content</a>
+
+<div data-include="partials/nav.html"></div>
+
+<main id="main-content">
+  <section style="padding-bottom:40px;">
+    <div class="container section-head">
+      <p class="eyebrow">In Pictures</p>
+      <h1>Photo Gallery</h1>
+      <div class="divider">
+        <svg class="icon"><use href="assets/icons/sprite.svg#icon-image"></use></svg>
+      </div>
+      <p>A journey through the decades &mdash; from his wedding day to family celebrations with his children and grandchildren. Click any photo to view it larger.</p>
+    </div>
+
+    <div class="container gallery-grid" id="galleryGrid">
+
+      <figure class="gallery-item" tabindex="0" role="button" aria-label="View photo" data-caption="Pa. Ogunor and his bride on their wedding day">
+        <img src="assets/photos/gallery-1.jpg" alt="Pa. Ogunor and his bride on their wedding day, seated together" loading="lazy" decoding="async">
+        <span class="caption-bar">His Wedding Day</span>
+      </figure>
+
+      <figure class="gallery-item" tabindex="0" role="button" aria-label="View photo" data-caption="Signing the wedding register, surrounded by family and friends">
+        <img src="assets/photos/gallery-2.jpg" alt="Signing the wedding register surrounded by family and friends" loading="lazy" decoding="async">
+        <span class="caption-bar">Signing the Register</span>
+      </figure>
+
+      <figure class="gallery-item" tabindex="0" role="button" aria-label="View photo" data-caption="The wedding party">
+        <img src="assets/photos/gallery-3.jpg" alt="Pa. Ogunor with his bride and the full wedding party" loading="lazy" decoding="async">
+        <span class="caption-bar">The Wedding Party</span>
+      </figure>
+
+      <figure class="gallery-item" tabindex="0" role="button" aria-label="View photo" data-caption="Toasting at the wedding reception">
+        <img src="assets/photos/gallery-4.jpg" alt="Pa. Ogunor giving a speech at his wedding reception" loading="lazy" decoding="async">
+        <span class="caption-bar">Reception Speech</span>
+      </figure>
+
+      <figure class="gallery-item" tabindex="0" role="button" aria-label="View photo" data-caption="In his middle years">
+        <img src="assets/photos/gallery-5.jpg" alt="Pa. Ogunor standing beside a car in his middle years" loading="lazy" decoding="async">
+        <span class="caption-bar">In His Prime</span>
+      </figure>
+
+      <figure class="gallery-item" tabindex="0" role="button" aria-label="View photo" data-caption="A portrait in his favourite ankara">
+        <img src="assets/photos/gallery-6.jpg" alt="Portrait of Pa. Ogunor in a yellow and blue ankara shirt" loading="lazy" decoding="async">
+        <span class="caption-bar">A Quiet Portrait</span>
+      </figure>
+
+      <figure class="gallery-item" tabindex="0" role="button" aria-label="View photo" data-caption="Relaxing at home">
+        <img src="assets/photos/gallery-7.jpg" alt="Pa. Ogunor relaxing at home in traditional attire" loading="lazy" decoding="async">
+        <span class="caption-bar">Dad, Chilling</span>
+      </figure>
+
+      <figure class="gallery-item" tabindex="0" role="button" aria-label="View photo" data-caption="With a beloved cousin">
+        <img src="assets/photos/gallery-8.jpg" alt="Pa. Ogunor with his cousin, both smiling" loading="lazy" decoding="async">
+        <span class="caption-bar">With His Cousin</span>
+      </figure>
+
+      <figure class="gallery-item" tabindex="0" role="button" aria-label="View photo" data-caption="Celebrating at Ebuka's wedding">
+        <img src="assets/photos/gallery-9.jpg" alt="Pa. Ogunor with family at Ebuka's wedding" loading="lazy" decoding="async">
+        <span class="caption-bar">At Ebuka&rsquo;s Wedding</span>
+      </figure>
+
+      <figure class="gallery-item" tabindex="0" role="button" aria-label="View photo" data-caption="Celebrating at Emeka's wedding">
+        <img src="assets/photos/gallery-10.jpg" alt="Pa. Ogunor with family at Emeka's wedding" loading="lazy" decoding="async">
+        <span class="caption-bar">At Emeka&rsquo;s Wedding</span>
+      </figure>
+
+      <figure class="gallery-item" tabindex="0" role="button" aria-label="View photo" data-caption="The jolly, joyful man everyone remembers">
+        <img src="assets/photos/gallery-11.jpg" alt="Pa. Ogunor smiling playfully, holding his glasses" loading="lazy" decoding="async">
+        <span class="caption-bar">Jolly Good Dad</span>
+      </figure>
+
+    </div>
+
+    <div class="container" style="text-align:center; margin-top:32px;">
+      <p style="opacity:0.7; font-size:0.95rem;">Have a photo to add? Please share it directly with a member of the Ogunor family for inclusion.</p>
+    </div>
+  </section>
+</main>
+
+<div id="lightbox" class="lightbox" role="dialog" aria-modal="true" aria-label="Photo viewer" aria-hidden="true">
+  <div class="lightbox-inner">
+    <button id="lightboxClose" class="lightbox-close" aria-label="Close">
+      <svg class="icon"><use href="assets/icons/sprite.svg#icon-close"></use></svg>
+    </button>
+    <img id="lightboxImg" src="" alt="" style="max-height:80vh; margin:0 auto; border:1px solid var(--gold);">
+    <p id="lightboxCaption" style="color:var(--cream-2); margin-top:16px; font-family:var(--font-sub); letter-spacing:0.05em;"></p>
+  </div>
+</div>
+
+<div data-include="partials/footer.html"></div>
+
+<script src="js/include.js"></script>
+<script src="js/main.js"></script>
+</body>
+</html>
