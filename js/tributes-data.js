@@ -45,7 +45,7 @@ const TRIBUTES = [
   // ---------------- DAUGHTERS ----------------
   {
     category: 'daughters', relation: 'Daughter',
-    author: 'Ezenwanne Oguno-Nnaji (Adanne)',
+    author: 'Ezinwanne Oguno-Paschal (Adanne)',
     title: 'Tribute to My Beloved Dad',
     paragraphs: [
       `Obu Nnam, ezigbommadu. Dad, it is really hard for me to pen down your tribute. I know you aged, but losing you was so painful to me. For the past 13 years, since our mum died, you played the role of a dad and mum at the same time. You checked up on everyone every day till the last week of your death. Daddy, you are a lover of everyone, your jokes and fatherly love has made so much impact in the lives of people around you.`,
@@ -216,6 +216,18 @@ const TRIBUTES = [
   },
 
   // ---------------- EXTENDED FAMILY, IN-LAWS & FRIENDS ----------------
+  {
+    category: 'extended', relation: 'Mentee',
+    author: 'Obinna Okenwa (Obiadada)',
+    title: 'Farewell to a Father, Mentor and Encourager',
+    paragraphs: [
+      `Papa, how do I say goodbye to a man whose presence meant so much to me? You were a father in every sense of the word. You cared, you listened, you encouraged, and you always wanted to know that I was doing well.`,
+      `Your morning calls will remain one of my most precious memories. You would call simply to ask, "How are you feeling?" and make sure everything was alright. Your concern came from a heart filled with love.`,
+      `Whenever I faced challenges, your words were always encouraging: "It must get better." Papa, those words will continue to live in me. Whenever life becomes difficult, I will remember your voice and hold on to the hope you always gave me.`,
+      `You were a good-hearted man, a peaceful man, and a father to many. Your 90 years on earth were filled with moments that touched lives and created memories that will never disappear. Today, we mourn you with tears, but we also celebrate the beautiful life you lived.`,
+      `Thank you for being a father to me. Thank you for your calls. Thank you for your encouragement. Thank you for believing that tomorrow would always be better. Jee nke oma, Obuweteaku. Until we meet again, may your gentle soul rest in perfect peace. 🙏🕊️`
+    ]
+  },
   {
     category: 'extended', relation: 'Son-in-law',
     author: 'Pascal Nnaji',

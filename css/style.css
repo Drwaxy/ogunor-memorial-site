@@ -826,6 +826,138 @@ button:disabled { cursor: not-allowed; opacity: 0.65; }
   opacity: 0.65;
 }
 
+/* -------- Memorial music -------- */
+.music-control {
+  position: fixed;
+  right: max(20px, env(safe-area-inset-right));
+  bottom: max(20px, env(safe-area-inset-bottom));
+  z-index: 80;
+  display: inline-flex;
+  align-items: center;
+  gap: 0;
+  width: 52px;
+  height: 52px;
+  padding: 0;
+  overflow: hidden;
+  border: 1px solid var(--gold);
+  border-radius: 999px;
+  background: rgba(74, 17, 16, 0.96);
+  color: var(--gold-light);
+  box-shadow: 0 8px 24px rgba(53, 35, 28, 0.24);
+  cursor: pointer;
+  transition: width var(--transition), background var(--transition), transform var(--transition);
+}
+.music-control:hover,
+.music-control:focus-visible {
+  width: 154px;
+  background: var(--wine);
+}
+.music-control:active { transform: translateY(1px); }
+.music-control:disabled { width: 52px; cursor: default; }
+.music-control__icon {
+  position: relative;
+  display: grid;
+  place-items: center;
+  width: 50px;
+  height: 50px;
+  flex: 0 0 50px;
+  font-family: var(--font-heading);
+  font-size: 1.45rem;
+}
+.music-control__label {
+  padding-right: 18px;
+  white-space: nowrap;
+  font-family: var(--font-sub);
+  font-size: 0.64rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+.music-pause { display: none; align-items: center; gap: 4px; }
+.music-pause i { display: block; width: 3px; height: 16px; background: currentColor; }
+.music-control.is-playing .music-note { display: none; }
+.music-control.is-playing .music-pause { display: flex; }
+
+.music-welcome {
+  position: fixed;
+  inset: 0;
+  z-index: 150;
+  display: grid;
+  place-items: center;
+  padding: 24px;
+  background: rgba(34, 20, 15, 0.76);
+  backdrop-filter: blur(7px);
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 220ms ease, visibility 220ms ease;
+}
+.music-welcome.is-visible { opacity: 1; visibility: visible; }
+.music-welcome__panel {
+  position: relative;
+  width: min(100%, 590px);
+  padding: clamp(40px, 7vw, 64px) clamp(24px, 7vw, 58px);
+  text-align: center;
+  background: var(--cream);
+  border: 1px solid var(--gold);
+  box-shadow: 0 24px 70px rgba(34, 20, 15, 0.35);
+}
+.music-welcome__panel::before {
+  content: '';
+  position: absolute;
+  inset: 7px;
+  border: 1px solid rgba(200, 162, 74, 0.38);
+  pointer-events: none;
+}
+.music-welcome__ornament {
+  width: 42px;
+  height: 42px;
+  margin: 0 auto 16px;
+  color: var(--gold);
+  font-size: 1.3rem;
+  line-height: 42px;
+  border: 1px solid rgba(200, 162, 74, 0.55);
+  border-radius: 50%;
+}
+.music-welcome h2 {
+  margin-bottom: 14px;
+  font-size: clamp(2rem, 5vw, 2.8rem);
+  line-height: 1.12;
+}
+.music-welcome__actions {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 16px;
+  margin-top: 30px;
+}
+.music-welcome__quiet {
+  min-height: 44px;
+  padding: 8px 14px;
+  border: 0;
+  background: transparent;
+  color: var(--wine);
+  font-family: var(--font-sub);
+  font-size: 0.68rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  text-decoration: underline;
+  text-underline-offset: 4px;
+  cursor: pointer;
+}
+.music-welcome__quiet:hover { color: var(--gold); }
+.music-welcome-open { overflow: hidden; }
+
+@media (max-width: 520px) {
+  .music-control,
+  .music-control:hover,
+  .music-control:focus-visible { width: 50px; height: 50px; }
+  .music-control__icon { width: 48px; height: 48px; flex-basis: 48px; }
+  .music-control__label { position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0); }
+  .music-welcome { padding: 14px; }
+  .music-welcome__panel { padding: 38px 20px; }
+  .music-welcome__actions .btn { width: 100%; justify-content: center; padding-left: 18px; padding-right: 18px; }
+}
+
 @media (prefers-reduced-motion: reduce) {
   * { animation: none !important; transition: none !important; scroll-behavior: auto !important; }
 }
