@@ -57,6 +57,12 @@ npx serve .
 
 Then open the URL it prints (usually `http://localhost:3000`).
 
+## Background memorial music
+
+Place the final audio file at the project root as `memorial-music.mp3`. The shared music controller in `js/main.js` uses `/memorial-music.mp3`, starts at 25% volume, loops continuously, and remembers the visitor's choice and playback position for the current browser session.
+
+Preview through a local web server rather than opening the HTML files with `file://`, because the root-relative audio URL is resolved by the web server.
+
 ## Deploying to Vercel (free)
 
 1. Install the Vercel CLI once: `npm install -g vercel`
