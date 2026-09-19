@@ -269,6 +269,16 @@ const TRIBUTES = [
     ]
   },
   {
+    category: 'extended', relation: 'Brother',
+    author: 'Mr. Ezekiel Mmaduakonam Oguno (Idejuogwugwu)',
+    title: 'Tribute to My Beloved Brother',
+    paragraphs: [
+      `My dear brother, it is with total submission to the will of God that I bid you farewell.`,
+      `You were a good man. You lived a long, fulfilled, and honourable life. You were a man of peace, wisdom, and kindness. As my elder brother, you led the way and showed me and the entire family the right path. Your guidance and love will never be forgotten.`,
+      `You have finished your race and fought a good fight. Though it is painful to let you go, we thank God for your life and for the good name you left behind. Rest well, my brother, in the bosom of the Lord, until we meet again.`
+    ]
+  },
+  {
     category: 'extended', relation: 'Family',
     author: 'Prof. Paschal Onyi Oguno, Ph.D, mni',
     title: 'Orameife! (29th August, 2026)',
@@ -295,6 +305,16 @@ const TRIBUTES = [
     paragraphs: [
       `You were more than a father figure to me. You always wanted to bring out the best in me and guided me with love and wisdom. If not for you, I would probably still be far backwards.`,
       `Your kindness, care, and support touched my life deeply. You will never be forgotten. May your beautiful soul rest in perfect peace (Obuweteaku).`
+    ]
+  },
+  {
+    category: 'extended', relation: 'Niece',
+    author: 'Mrs. Emelda Chy Anyaegbu (n&eacute;e Oguno)',
+    title: 'In Loving Memory of My Beloved Uncle, Hyacinth Nwafor Oguno (Oremeife)',
+    paragraphs: [
+      `My heart is heavy as I say goodbye to my beloved uncle, Hyacinth Nwafor Ogunor, fondly known as Oremenyi.`,
+      `You were a kind, loving and remarkable man whose presence brought warmth to those around you. Your words, wisdom, and memories will forever remain in our hearts.`,
+      `Though your passing has left a painful void, I am grateful for the life you lived and the memories we shared. You will be deeply missed, but never forgotten. Rest peacefully, dear Uncle Oremenyi. May your gentle soul rest in perfect peace.`
     ]
   },
   {
@@ -327,6 +347,17 @@ const TRIBUTES = [
       `You became the grandfather I never had the opportunity to meet or know, and through you, I came to understand what it feels like to have that kind of love, guidance, and presence in my life. You filled a space in my heart that I never knew was empty, and for that, I will forever be grateful.`,
       `Your death came as a shock to me, and honestly, it is still difficult to accept that you are no longer here. There are some goodbyes the heart simply isn't prepared for. But as painful as this loss is, we cannot question God. We can only be grateful for the beautiful life you lived and the many lives you made better simply by being in them.`,
       `I am so proud to have called you my uncle, my mannest man, Obuwetaku Orameyee. Your wisdom will continue to speak through the people you taught. Your kindness will continue through the people you helped. Rest peacefully, my beloved uncle. 🕊️ Until we meet again.`
+    ]
+  },
+  {
+    category: 'extended', relation: 'Nephew',
+    author: 'Mr. Ezekiel Onyedikachi Oguno',
+    title: 'Tribute to My Dear Uncle',
+    paragraphs: [
+      `My dear uncle, I write this with a heavy heart, but with gratitude to God for your life.`,
+      `You were a good man, a father to all of us, and a pillar in our family. For 90 years you lived a life of honour, wisdom, and kindness. You left behind a good name and a legacy we will always be proud of.`,
+      `As my uncle, you were more than family, you were a teacher and a guide. Your words of advice, your prayers, and your quiet strength meant so much to me. You always welcomed me with love and treated me like your own son.`,
+      `I will miss your presence, your stories, and your wise counsel. But I am comforted knowing that you lived a fulfilled life and have gone to rest with the Lord. Rest well, dear uncle. You will forever remain in our hearts.`
     ]
   },
   {
