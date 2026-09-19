@@ -52,52 +52,6 @@ function initLightbox() {
   });
 }
 
-// -------- Condolence form (Formspree) --------
-function initCondolenceForm() {
-  const form = document.getElementById('condolenceForm');
-  if (!form) return;
-
-  const status = document.getElementById('formStatus');
-  const endpoint = form.getAttribute('action');
-  const placeholderEndpoint = endpoint && endpoint.includes('YOUR_FORM_ID');
-
-  form.addEventListener('submit', async (e) => {
-    e.preventDefault();
-
-    if (placeholderEndpoint) {
-      status.textContent = 'Form is not connected yet — see README for the 2-minute Formspree setup.';
-      status.className = 'form-status error';
-      return;
-    }
-
-    const submitBtn = form.querySelector('button[type="submit"]');
-    submitBtn.disabled = true;
-    status.textContent = 'Sending...';
-    status.className = 'form-status';
-
-    try {
-      const res = await fetch(endpoint, {
-        method: 'POST',
-        body: new FormData(form),
-        headers: { Accept: 'application/json' },
-      });
-      if (res.ok) {
-        status.textContent = 'Thank you — your message has been received.';
-        status.className = 'form-status success';
-        form.reset();
-      } else {
-        status.textContent = 'Something went wrong. Please try again.';
-        status.className = 'form-status error';
-      }
-    } catch (err) {
-      status.textContent = 'Network error. Please try again.';
-      status.className = 'form-status error';
-    } finally {
-      submitBtn.disabled = false;
-    }
-  });
-}
-
 // -------- Countdown (Live Stream page) --------
 function initCountdown() {
   const el = document.getElementById('countdown');
@@ -319,7 +273,6 @@ document.addEventListener('DOMContentLoaded', () => {
   // Wait a tick so partials (header/footer) are injected first.
   setTimeout(() => {
     initLightbox();
-    initCondolenceForm();
     initCountdown();
   }, 0);
 });

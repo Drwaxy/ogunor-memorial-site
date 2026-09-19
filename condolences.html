@@ -28,32 +28,40 @@
     </div>
 
     <div class="container">
-      <!--
-        Connect this form to Formspree in 2 minutes:
-        1. Create a free account at https://formspree.io
-        2. Create a new form, copy the endpoint (looks like https://formspree.io/f/xxxxabcd)
-        3. Replace YOUR_FORM_ID in the action attribute below with your form ID
-      -->
       <form id="condolenceForm" class="form" action="https://formspree.io/f/xzezbqgq" method="POST">
+        <p id="previewNotice" class="preview-notice" hidden>Local preview: test entries are saved on this computer. No email is sent.</p>
         <div>
           <label for="name">Your Name</label>
-          <input type="text" id="name" name="name" required autocomplete="name">
+          <input type="text" id="name" name="name" maxlength="120" required autocomplete="name">
         </div>
         <div>
           <label for="relationship">Relationship to the Family (optional)</label>
-          <input type="text" id="relationship" name="relationship" placeholder="e.g. Grandchild, Friend, Neighbor">
+          <input type="text" id="relationship" name="relationship" maxlength="160" placeholder="e.g. Grandchild, Friend, Neighbor">
         </div>
         <div>
           <label for="email">Email (optional, not published)</label>
-          <input type="email" id="email" name="email" autocomplete="email">
+          <input type="email" id="email" name="email" maxlength="254" autocomplete="email">
         </div>
         <div>
           <label for="message">Your Message</label>
-          <textarea id="message" name="message" required placeholder="Share a memory or message of condolence..."></textarea>
+          <textarea id="message" name="message" maxlength="10000" required placeholder="Share a memory or message of condolence..."></textarea>
         </div>
+        <div class="signature-field">
+          <label id="signatureLabel">Your Signature (optional)</label>
+          <p id="signatureHelp" class="signature-help">Sign in the box using your finger, stylus or mouse. You can also leave it blank; your name above signs the register.</p>
+          <canvas id="signaturePad" width="1000" height="360" aria-labelledby="signatureLabel" aria-describedby="signatureHelp" role="img">Handwritten signature area. You may leave this blank and use your name above.</canvas>
+          <div class="signature-tools">
+            <span id="signatureStatus" role="status">Sign here</span>
+            <button type="button" id="clearSignature" class="btn btn-outline-dark">Clear Signature</button>
+          </div>
+        </div>
+        <label class="register-consent"><input type="checkbox" id="consent" required> <span>I agree that the Ogunor family may privately store my message, contact details and optional signature, and receive my message by email.</span></label>
+        <div class="register-trap" aria-hidden="true"><label>Leave blank<input name="website" tabindex="-1" autocomplete="off"></label></div>
+        <div id="botCheck"></div>
         <div style="text-align:center;">
-          <button type="submit" class="btn btn-primary">Sign the Register</button>
+          <button type="submit" class="btn btn-primary" disabled>Sign the Register</button>
         </div>
+        <noscript>Please enable JavaScript to sign the register.</noscript>
         <p id="formStatus" class="form-status" role="status" style="text-align:center;"></p>
       </form>
     </div>
@@ -64,5 +72,6 @@
 
 <script src="js/include.js"></script>
 <script src="js/main.js"></script>
+<script src="js/condolences.js"></script>
 </body>
 </html>

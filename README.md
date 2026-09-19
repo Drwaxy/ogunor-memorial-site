@@ -32,15 +32,13 @@ All 34 tributes from `Tributes.txt` were transcribed into `js/tributes-data.js` 
 
 **To add a new tribute later:** open `js/tributes-data.js` and copy one `{ category, relation, author, title, paragraphs }` block — no other file needs to change.
 
-## 2. Connect the Condolence Register form
+## Condolence register and signatures
 
-The form currently points at a placeholder and will show an error if submitted as-is. To make it actually deliver messages to an email inbox:
-
-1. Go to [formspree.io](https://formspree.io) and create a free account.
-2. Create a new form, copy the endpoint it gives you (looks like `https://formspree.io/f/xxxxabcd`).
-3. In `condolences.html`, find `action="https://formspree.io/f/YOUR_FORM_ID"` and replace `YOUR_FORM_ID` with your real ID.
-
-Free tier handles 50 submissions/month, which should cover this use case. If you expect more, use Formspree's Gold tier or switch to a Google Form embed instead — ask and I'll wire that up.
+The register supports optional handwritten signatures and private archival of messages.
+Formspree continues to deliver text messages to email on the existing free plan.
+See [SIGNATURE-SETUP.md](SIGNATURE-SETUP.md) for local review, private repository access,
+production environment settings and retrieval instructions. Run `npm ci` and `npm run dev`
+to review locally without sending emails or writing to GitHub.
 
 ## 3. Add real videos / the live stream link
 

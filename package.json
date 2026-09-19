@@ -1,0 +1,14 @@
+{
+  "name": "ogunor-memorial-site",
+  "private": true,
+  "scripts": {
+    "dev": "node scripts/preview.cjs",
+    "test": "node --test tests/*.test.cjs"
+  },
+  "dependencies": {
+    "pngjs": "7.0.0"
+  },
+  "devDependencies": {
+    "@playwright/test": "^1.63.0"
+  }
+}

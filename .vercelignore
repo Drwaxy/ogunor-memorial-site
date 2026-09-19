@@ -1,0 +1,12 @@
+node_modules
+.git
+.env*
+.local-condolences
+tests
+scripts
+README.md
+SIGNATURE-SETUP.md
+Dad_s Pictures
+Tributes.txt
+test-results
+playwright.config.cjs
