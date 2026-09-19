@@ -47,7 +47,7 @@
         script.src = 'https://challenges.cloudflare.com/turnstile/v0/api.js?render=explicit';
         script.onload = resolve; script.onerror = reject; document.head.appendChild(script);
       });
-      widget = window.turnstile.render('#botCheck', { sitekey: config.siteKey, action: 'condolence' });
+      widget = window.turnstile.render('#botCheck', { sitekey: config.siteKey, action: 'condolence', size: 'compact' });
     }
     button.disabled = false;
   }).catch(() => { config = null; say('The register is unavailable at the moment. Please try again later.', true); });
