@@ -964,8 +964,9 @@ button:disabled { cursor: not-allowed; opacity: 0.65; }
 
 /* Condolence signatures */
 .signature-help { font-size: .95rem; margin: 8px 0 12px; }
-#signaturePad { display: block; width: 100%; height: auto; aspect-ratio: 25 / 9; background: #fff; border: 1px solid var(--gold); border-radius: 8px; touch-action: none; cursor: crosshair; }
-.signature-tools { display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 12px; margin-top: 12px; }
+#signaturePad { display: block; width: 100%; max-width: 360px; height: auto; aspect-ratio: 25 / 9; background: #fff; border: 1px solid var(--gold); border-radius: 8px; touch-action: none; cursor: crosshair; }
+.signature-tools { display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 8px 12px; max-width: 360px; margin-top: 8px; }
+.signature-tools .btn { min-height: 44px; padding: 10px 14px; font-size: .65rem; }
 .signature-tools span { font-size: .9rem; }
 .form .register-consent { display: flex; align-items: flex-start; gap: 12px; font-family: inherit; text-transform: none; letter-spacing: normal; font-size: .95rem; }
 .form .register-consent input { width: 20px; height: 20px; flex: 0 0 20px; margin-top: 3px; }
