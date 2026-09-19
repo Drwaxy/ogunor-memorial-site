@@ -72,3 +72,18 @@ test('API rejects foreign origins and invalid bot tokens before storage writes',
     for (const [key, value] of Object.entries(saved)) { if (value === undefined) delete process.env[key]; else process.env[key] = value; }
   }
 });
+test('storage accepts surrounding whitespace in environment settings', async () => {
+  const fake = fakeGit();
+  await archive(validate(input()), { CONDOLENCE_GITHUB_REPO: ' owner/archive\r\n', CONDOLENCE_GITHUB_TOKEN: ' test-token\n' }, async (url, options) => {
+    assert.equal(options.headers.Authorization, 'Bearer test-token');
+    return fake.fetcher(url, options);
+  });
+  assert.ok(fake.calls.some(c => c.route === '/git/commits'));
+});
+test('GitHub write failures retain a safe operation and HTTP status for diagnosis', async () => {
+  const fake = fakeGit();
+  await assert.rejects(archive(validate(input()), env, async (url, options) => {
+    if (url.endsWith('/git/blobs')) return { ok: false, status: 403 };
+    return fake.fetcher(url, options);
+  }), error => error.code === 'github_blobs' && error.status === 403 && !error.message.includes('test-token'));
+});
