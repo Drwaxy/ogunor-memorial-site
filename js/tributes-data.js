@@ -259,7 +259,7 @@ const TRIBUTES = [
     ]
   },
   {
-    category: 'extended', relation: 'Brother',
+    category: 'extended', relation: 'Family',
     author: 'Mr. Paul C. Oguno (Onyenaelinkeonwelu)',
     title: 'Tribute to My Beloved Brother',
     paragraphs: [
@@ -269,7 +269,7 @@ const TRIBUTES = [
     ]
   },
   {
-    category: 'extended', relation: 'Brother',
+    category: 'extended', relation: 'Family',
     author: 'Mr. Ezekiel Mmaduakonam Oguno (Idejuogwugwu)',
     title: 'Tribute to My Beloved Brother',
     paragraphs: [
@@ -299,8 +299,8 @@ const TRIBUTES = [
     ]
   },
   {
-    category: 'extended', relation: 'Friend',
-    author: 'Onyenachiee',
+    category: 'extended', relation: 'Family',
+    author: 'Chijioke Celestine Oguno (Onyenachie)',
     title: 'Tribute to a Father Figure',
     paragraphs: [
       `You were more than a father figure to me. You always wanted to bring out the best in me and guided me with love and wisdom. If not for you, I would probably still be far backwards.`,
@@ -339,7 +339,7 @@ const TRIBUTES = [
     ]
   },
   {
-    category: 'extended', relation: 'Niece',
+    category: 'extended', relation: 'Family',
     author: 'Chidera Oguno',
     title: 'Tribute to My Beloved Uncle, Obuwetaku Orameyee',
     paragraphs: [
